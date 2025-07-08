@@ -1,11 +1,16 @@
+/// <reference types="vitest" />
 import tailwindcss from "@tailwindcss/vite"
 import react from "@vitejs/plugin-react"
 import path from "path"
 import { defineConfig } from "vite"
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [tailwindcss(), react()],
+  test: {
+    globals: true,
+    coverage: { provider: "v8" },
+    include: ["src/**/*.test.ts"],
+  },
   resolve: {
     alias: {
       "00_app": path.resolve(__dirname, "src/00_app"),

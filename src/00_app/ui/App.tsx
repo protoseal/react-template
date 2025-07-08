@@ -1,7 +1,6 @@
 import type { FC } from "react"
 
-import "../styles/index.scss"
-import "../styles/tailwindcss.css"
+import "../styles/index.css"
 
 export const App: FC = () => {
   return (
