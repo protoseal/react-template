@@ -1,0 +1,13 @@
+import type { FC } from "react"
+
+import "../styles/index.scss"
+import "../styles/tailwindcss.css"
+
+export const App: FC = () => {
+  return (
+    <div>
+      <h1 className="text-5xl font-bold text-red-500">App is started!</h1>
+      <span>React ts vite</span>
+    </div>
+  )
+}

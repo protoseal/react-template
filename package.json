@@ -6,21 +6,22 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint:eslint": "eslint --fix",
-    "lint:prettier": "prettier --write",
-    "lint:stylelint": "stylelint --fix",
+    "lint:eslint": "eslint --fix \"src/**/*.{js,jsx,ts,tsx}\"",
+    "lint:prettier": "prettier --write \"src/**/*.{js,jsx,ts,tsx,css,scss,md,json}\"",
+    "lint:stylelint": "stylelint --fix \"src/**/*.{css,scss}\"",
     "precommit": "lint-staged",
     "prepare": "husky",
     "preview": "vite preview"
   },
   "lint-staged": {
-    "**/*.{ts,tsx}": [
-      "yarn run lint:eslint --",
-      "yarn run lint:prettier --"
+    "**/*.{js,jsx,ts,tsx}": [
+      "yarn run lint:eslint"
     ],
     "**/*.{css,scss}": [
-      "yarn run lint:stylelint --",
-      "yarn run lint:prettier --"
+      "yarn run lint:stylelint"
+    ],
+    "**/*.{js,jsx,ts,tsx,css,scss,md,json}": [
+      "yarn run lint:prettier"
     ]
   },
   "dependencies": {
@@ -32,6 +33,7 @@
   "devDependencies": {
     "@eslint/js": "^9.30.1",
     "@trivago/prettier-plugin-sort-imports": "^5.2.2",
+    "@types/node": "^24.0.10",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "@vitejs/plugin-react": "^4.6.0",
