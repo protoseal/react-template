@@ -10,7 +10,7 @@ function App() {
   return (
     <React.Fragment>
       <div>
-        <span>hello</span>
+        <span className="h-10 w-10 text-5xl text-red-300">hello</span>
         <a href="https://vite.dev" target="_blank" rel="noreferrer">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
