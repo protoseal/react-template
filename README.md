@@ -1,69 +1,73 @@
-# React + TypeScript + Vite
+# React Template 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React starter template with Vite, TypeScript, and best practices for frontend development.
 
-Currently, two official plugins are available:
+## Features ✨
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ⚡ **Blazing fast** with [Vite](https://vitejs.dev/)
+- 🏗️ **Feature-Sliced Design (FSD)** architecture
+- 🎨 **Tailwind CSS** for utility-first styling
+- 🧪 **Vitest** for unit testing
+- 💅 **SCSS** for advanced styling
+- 🛠️ **ESLint** + **Prettier** + **Stylelint** for code quality
+- 📦 **TypeScript** out of the box
+- 🔥 **Hot Module Replacement (HMR)**
 
-## Expanding the ESLint configuration
+## Tech Stack 🛠️
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+| Technology            | Purpose                     |
+| --------------------- | --------------------------- |
+| React                 | Frontend library            |
+| Vite                  | Build tool and dev server   |
+| TypeScript            | Type checking               |
+| Vitest                | Unit testing framework      |
+| Tailwind CSS          | Utility-first CSS framework |
+| SCSS                  | CSS preprocessor            |
+| ESLint                | JavaScript/TS linter        |
+| Prettier              | Code formatter              |
+| Stylelint             | SCSS/CSS linter             |
+| Feature-Sliced Design | Project architecture        |
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Project Structure 📂
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+src/
+├── app/                  # Application configuration
+├── processes/            # High-level business processes
+├── pages/                # Application pages
+├── widgets/              # Independent page sections
+├── features/             # Feature implementations
+├── entities/             # Business entities
+├── shared/               # Shared resources (UI, libs, utils)
+│   ├── ui/               # UI components
+│   ├── lib/              # Libraries
+│   └── utils/            # Utility functions
+public/                   # Static assets
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Getting Started 🏁
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Prerequisites
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Node.js >= 16.0.0
+- npm/yarn/pnpm
+
+### Installation
+
+1. Clone the repository;
+
+2. Navigate to the project directory:
+
+```bash
+cd react-template
+```
+
+3. Install dependencies:
+
+```bash
+npm install
+# or
+yarn
+# or
+pnpm install
 ```

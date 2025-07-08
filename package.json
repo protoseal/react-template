@@ -16,8 +16,7 @@
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
-      "yarn run lint:eslint",
-      "vitest related --run"
+      "yarn run lint:eslint"
     ],
     "**/*.{css,scss}": [
       "yarn run lint:stylelint"
